@@ -5,7 +5,6 @@ import { ExternalLink } from "lucide-react";
 interface ClothingItem {
   id: number;
   name: string;
-  price: string;
   image: string;
   description: string;
   category?: string;
@@ -17,7 +16,7 @@ interface ClothingCardProps {
 
 const ClothingCard = ({ item }: ClothingCardProps) => {
   const handleBuyNow = () => {
-    const message = `Hi! I'm interested in the ${item.name} (Price: ${item.price}). Can you provide more details?`;
+    const message = `Hi! I'm interested in the ${item.name}. Can you provide more details?`;
     const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -39,10 +38,7 @@ const ClothingCard = ({ item }: ClothingCardProps) => {
         <p className="text-muted-custom mb-4 line-clamp-2">
           {item.description}
         </p>
-        <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold text-royal-maroon">
-            {item.price}
-          </span>
+        <div className="flex justify-end items-center">
           <Button
             onClick={handleBuyNow}
             size="sm"

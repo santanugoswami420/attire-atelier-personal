@@ -80,7 +80,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://wa.me/919876543210" 
+                  href="https://wa.me/9748741421" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-golden transition-smooth"
@@ -105,7 +105,7 @@ const Footer = () => {
               </p>
               <p>
                 <strong>Location:</strong><br />
-                Mumbai, Maharashtra<br />
+                Kolkata, WestBengal<br />
                 India
               </p>
             </div>
@@ -119,8 +119,8 @@ const Footer = () => {
               © {currentYear} Attire Atelier. All rights reserved.
             </p>
             <p className="text-gray-300 text-sm flex items-center">
-              Made with <Heart className="h-4 w-4 mx-1 text-golden" fill="currentColor" /> 
-              for traditional fashion lovers
+              Wesbite Made and Managed By <Heart className="h-4 w-4 mx-1 text-golden" fill="currentColor" /> 
+              Bongo Tech
             </p>
           </div>
         </div>

@@ -112,7 +112,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Location</p>
-                      <p className="text-muted-custom">Mumbai, Maharashtra, India</p>
+                      <p className="text-muted-custom">Kolkata, WestBengal, India</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4 cursor-pointer" onClick={() => window.open('https://wa.me/919876543210', '_blank')}>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import ClothingCard from "./ClothingCard";
 import clothing1 from "@/assets/clothing1.jpg";
 import clothing2 from "@/assets/clothing2.jpg";
@@ -56,16 +57,9 @@ interface GalleryProps {
 }
 
 const Gallery = ({ showAll = false }: GalleryProps) => {
-  const [showAllItems, setShowAllItems] = useState(showAll);
-  
+  const [showAllItems] = useState(showAll);
+  const navigate = useNavigate();
   const displayItems = showAllItems ? clothingItems : clothingItems.slice(0, 3);
-
-  const scrollToGallery = () => {
-    const galleryElement = document.getElementById('gallery');
-    if (galleryElement) {
-      galleryElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="gallery" className="py-16 bg-gradient-elegant">
@@ -92,10 +86,7 @@ const Gallery = ({ showAll = false }: GalleryProps) => {
         {!showAllItems && (
           <div className="text-center">
             <Button
-              onClick={() => {
-                setShowAllItems(true);
-                setTimeout(scrollToGallery, 100);
-              }}
+              onClick={() => navigate("/catalog")}
               size="lg"
               variant="outline"
               className="border-royal-maroon text-royal-maroon hover:bg-royal-maroon hover:text-white px-8 py-6 text-lg font-semibold transition-elegant"
