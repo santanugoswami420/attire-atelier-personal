@@ -8,6 +8,7 @@ interface ClothingItem {
   price: string;
   image: string;
   description: string;
+  category?: string;
 }
 
 interface ClothingCardProps {

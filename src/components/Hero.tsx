@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface HeroProps {
   onSeeMoreClick: () => void;
@@ -44,13 +45,15 @@ const Hero = ({ onSeeMoreClick }: HeroProps) => {
             >
               Explore Collection
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-royal-maroon text-royal-maroon hover:bg-royal-maroon hover:text-white px-8 py-6 text-lg font-semibold transition-elegant"
-            >
-              View Catalog
-            </Button>
+            <Link to="/catalog">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-royal-maroon text-royal-maroon hover:bg-royal-maroon hover:text-white px-8 py-6 text-lg font-semibold transition-elegant"
+              >
+                View Catalog
+              </Button>
+            </Link>
           </div>
 
           {/* Scroll Indicator */}
