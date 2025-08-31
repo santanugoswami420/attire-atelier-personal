@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Send, Mail, Phone, MapPin } from "lucide-react";
+import { Send, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 
@@ -115,26 +115,17 @@ const ContactForm = () => {
                       <p className="text-muted-custom">Mumbai, Maharashtra, India</p>
                     </div>
                   </div>
+                  <div className="flex items-center space-x-4 cursor-pointer" onClick={() => window.open('https://wa.me/919876543210', '_blank')}>
+                    <div className="bg-emerald p-3 rounded-full">
+                      <MessageCircle className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-foreground">WhatsApp</p>
+                      <p className="text-muted-custom">Quick message for instant support</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              {/* WhatsApp Quick Contact */}
-              <Card className="bg-emerald text-white border-0 shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-white">Quick Contact</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4">For immediate assistance, reach out to us on WhatsApp!</p>
-                  <Button
-                    onClick={() => window.open('https://wa.me/919876543210', '_blank')}
-                    variant="secondary"
-                    className="w-full bg-white text-emerald hover:bg-gray-100 transition-elegant"
-                  >
-                    <Send className="w-4 h-4 mr-2" />
-                    Message on WhatsApp
-                  </Button>
-                </CardContent>
-              </Card>
             </div>
 
             {/* Contact Form */}
